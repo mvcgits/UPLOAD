@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.accp.school</groupId>
+	<artifactId>school-master</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>school-pojo</module>
+		<module>school-mapper</module>
+		<module>school-service</module>
+		<module>../school-web</module>
+	</modules>
+
+	<!-- 与私服连接起来 -->
+	<!-- 上传jar的路径 -->
+	<distributionManagement>
+		<repository>
+			<id>java16</id>
+			<url>http://localhost:8081/nexus/content/repositories/java16//</url>
+		</repository>
+	</distributionManagement>
+	<!-- 配置私服jar下载地址 -->
+	<repositories>
+		<repository>
+			<id>public</id>
+			<url>http://localhost:8081/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+</project>
